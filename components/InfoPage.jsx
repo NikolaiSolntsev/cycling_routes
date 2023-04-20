@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 function InfoPage({ title, trip }) {
   return (
     <Layout title={title}>
-      <div className="card-info" style={{ width: '18rem' }}>
+      <div className="card" style={{ width: '18rem' }}>
         <img src={trip.map} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{trip.trip_name}</h5>

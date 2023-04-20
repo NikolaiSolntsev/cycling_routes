@@ -1,4 +1,5 @@
 const React = require('react');
+const NavBar = require('./NavBar');
 
 function Layout({ title, children, trip }) {
   return (
@@ -14,6 +15,7 @@ function Layout({ title, children, trip }) {
         />
       </head>
       <body className="body">
+      <NavBar trip={trip} />
         {children}
       </body>
     </html>

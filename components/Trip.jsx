@@ -8,7 +8,7 @@ function Trip({ trip }) {
         <div className="card-body">
           <h5 className="card-title">{trip.trip_name}</h5>
         </div>
-        <a href={`/trips/${trip.id}`}>Подробнее</a>
+        <a href={`/info/${trip.id}`}>Подробнее</a>
       </div>
     </li>
   );

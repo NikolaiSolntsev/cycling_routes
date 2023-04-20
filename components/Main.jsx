@@ -5,11 +5,11 @@ const Trip = require('./Trip');
 function Main({ title, trips = [] }) {
   return (
     <Layout title={title}>
-      <ul>
+      <div className='cards-conteiner'>
         {trips.map((trip) => (
           <Trip key={trip.id} trip={trip} />
         ))}
-      </ul>
+      </div>
     </Layout>
   );
 }

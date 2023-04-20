@@ -18,11 +18,15 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         allowNull: false,
       },
-      length: {
+      trip_length: {
         type: DataTypes.TEXT,
         allowNull: false,
       },
       trip_name: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+      },
+      description: {
         type: DataTypes.TEXT,
         allowNull: false,
       },
@@ -33,12 +37,16 @@ module.exports = (sequelize, DataTypes) => {
           model: 'Users',
           key: 'id',
         },
+        creator: {
+          type: DataTypes.TEXT,
+          allowNull: false,
+        },
       },
     },
     {
       sequelize,
       modelName: 'Trip',
-    }
+    },
   );
   return Trip;
 };

@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       },
-      length: {
+      trip_length: {
         type: Sequelize.TEXT,
         allowNull: false,
       },
@@ -30,6 +30,10 @@ module.exports = {
         },
       },
       creator: {
+        type: Sequelize.TEXT,
+        allowNull: false,
+      },
+      description: {
         type: Sequelize.TEXT,
         allowNull: false,
       },

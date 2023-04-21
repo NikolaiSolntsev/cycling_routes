@@ -2,9 +2,9 @@ const React = require('react');
 const Layout = require('./Layout');
 // const Trip = require('./Trip');
 
-function Registration({title}) {
+function Registration({title, user}) {
   return (
-    <Layout>
+    <Layout user>
     <title >{title}</title>
 
     <h1>Регистрация</h1>

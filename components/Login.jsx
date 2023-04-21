@@ -2,9 +2,9 @@ const React = require('react');
 const Layout = require('./Layout');
 // const Trip = require('./Trip');
 
-function LoginForm({title}) {
+function LoginForm({title, user}) {
   return (
-    <Layout>
+    <Layout user={user}>
        <title >{title}</title>
     <h1>Авторизация</h1>
     <form id="login-form">
@@ -36,7 +36,7 @@ function LoginForm({title}) {
       </button>
     </form>
 
-    {/* <script src="/scripts/login.js" defer/> */}
+    <script src="/scripts/login.js" defer/>
   </Layout>
   );
 }

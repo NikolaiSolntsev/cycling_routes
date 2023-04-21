@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function InfoPage({ title, trip }) {
+function InfoPage({ title, trip, user}) {
   return (
-    <Layout title={title}>
+    <Layout title={title} user={user}>
       <div className="card" style={{ width: '18rem' }}>
         <img src={trip.map} className="card-img-top" alt="..." />
         <div className="card-body">

@@ -5,6 +5,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 
+
 // const morgan = require('morgan');
 
 
@@ -16,6 +17,7 @@ const infoRoute = require('./routes/info.routes');
 const tripsApiRoute = require('./routes/api/tripsApi.routes');
 const authApiRoute = require('./routes/api/authApi.routes');
 const ssr = require('./middleware/ssr');
+const getUser = require('./middleware/getUser');
 const app = express();
 
 
@@ -29,6 +31,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.use(ssr);
+app.use(getUser);
 app.use(express.json());
 
 app.use('/', mainRoute);

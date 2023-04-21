@@ -7,6 +7,7 @@ function InfoPage({ title, trip, user}) {
       <div className="cardorado">
 
         <img src={trip.map} className="card-img-top" alt="..." />
+
         <div className="card-bodieso">
           <h5 className="card-titleso">{trip.trip_name}</h5>
           <p className="card-texto">{trip.trip_length}</p>
@@ -25,6 +26,7 @@ function InfoPage({ title, trip, user}) {
           <button className="button-edit js-edit-btn" type="button">
             Изменить маршрут
           </button>
+
         </div>
       </div>
 

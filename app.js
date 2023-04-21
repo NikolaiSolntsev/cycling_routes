@@ -5,9 +5,6 @@ const express = require('express');
 const session = require('express-session');
 
 // const morgan = require('morgan');
-
-
-
 const sessionConfig = require('./config/session');
 const mainRoute = require('./routes/main.routes');
 const infoRoute = require('./routes/info.routes');

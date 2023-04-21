@@ -5,8 +5,8 @@ function NavBar({ user }) {
     <nav id='nav' className='container'>
       <div className='links'>
         <a href='/'>HOME</a>
-        <a href='#'>LOGIN</a>
-        <a href='#'>REGISRATION</a>
+        <a href='/login'>LOGIN</a>
+        <a href='/registration'>REGISRATION</a>
         <a href='#'>ADD TRIP</a>
       </div>
     </nav>

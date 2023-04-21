@@ -5,8 +5,10 @@ const Layout = require('./Layout');
 function Registration({title}) {
   return (
     <Layout>
-    <h1>H</h1>
-    <form id="login-form">
+    <title >{title}</title>
+
+    <h1>Регистрация</h1>
+    <form id="registration-form">
       <div className="mb-3">
         <label htmlFor="exampleInputLogin1" className="form-label">
           Логин
@@ -30,12 +32,23 @@ function Registration({title}) {
           id="exampleInputPassword1"
         />
       </div>
-      <button type="submit" className="btn btn-primary">
+      <div className="mb-3">
+        <label htmlFor="exampleInputPassword2" className="form-label">
+          Пароль
+        </label>
+        <input
+          type="password"
+          name="password2"
+          className="form-control"
+          id="exampleInputPassword2"
+        />
+      </div>
+      <button type="submit" className="btn-registration">
         Вход
       </button>
     </form>
 
-    <script src="/public/scripts/login.js" defer/>
+    <script src="/scripts/registration.js" defer/>
   </Layout>
   );
 }

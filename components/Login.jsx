@@ -5,6 +5,7 @@ const Layout = require('./Layout');
 function LoginForm({title}) {
   return (
     <Layout>
+       <title >{title}</title>
     <h1>Авторизация</h1>
     <form id="login-form">
       <div className="mb-3">
@@ -35,7 +36,7 @@ function LoginForm({title}) {
       </button>
     </form>
 
-    <script src="/public/scripts/login.js" defer/>
+    {/* <script src="/scripts/login.js" defer/> */}
   </Layout>
   );
 }

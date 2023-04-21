@@ -7,6 +7,7 @@ function NavBar({ user }) {
         <a href='/'>HOME</a>
         <a href='#'>LOGIN</a>
         <a href='#'>REGISRATION</a>
+        <a href='#'>ADD TRIP</a>
       </div>
     </nav>
   );

@@ -2,6 +2,7 @@ const React = require('react');
 
 function NavBar({ user }) {
   return (
+
     <nav id='nav' className='container'>
       <div className='links'>
         <a href='/'>HOME</a>
@@ -10,6 +11,7 @@ function NavBar({ user }) {
         <a href='#'>ADD TRIP</a>
       </div>
     </nav>
+
   );
 }
 

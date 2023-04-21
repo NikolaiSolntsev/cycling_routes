@@ -2,6 +2,7 @@ const React = require('react');
 const Layout = require('./Layout');
 // const Trip = require('./Trip');
 
+
 function LoginForm({ title }) {
   return (
     <Layout>
@@ -39,6 +40,7 @@ function LoginForm({ title }) {
       </form>
       {/* <script src="/scripts/login.js" defer/> */}
     </Layout>
+
   );
 }
 

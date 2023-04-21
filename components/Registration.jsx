@@ -2,10 +2,13 @@ const React = require('react');
 const Layout = require('./Layout');
 // const Trip = require('./Trip');
 
-function Registration({ title }) {
+
+
+function Registration({title, user}) {
   return (
-    <Layout>
-      <title>{title}</title>
+    <Layout user>
+    <title >{title}</title>
+
 
       <div className='title'>
       <h1>SIGN UP</h1>

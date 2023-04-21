@@ -1,4 +1,5 @@
 const form = document.getElementById('login-form');
+const bcriypt = require('bcrypt')
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -6,20 +7,29 @@ form.addEventListener('submit', async (event) => {
   const form = event.target;
   const { login, password } = form;
 
-  const response = await fetch('/api/auth/login', {
-    method: 'POST',
-    body: JSON.stringify({
-      login: login.value,
-      password: password.value,
-    }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
+  const form = fetch('/login', async (req, res) => {
+    const { login, password } = req.body;
+  
+    const user = await User.findOne({ where: { login } });
+   
+    if (!user || !(await bcrypt.compare(password, user.password))) {
+      res.json({ success: false, message: 'Нет такого пользователя либо пароли не совпадают' });
+      return;
+    }
+  
+   
+    req.session.userId = user.id;
+  
+    res.json({ success: true });
   });
-
-  const result = await response.json();
-
-  if (result.success) {
+  if (response.ok) {
     window.location.href = '/';
-  }
+    console.log("пользователь зарегистрировался");
+  } else {
+  const result = await response.json();
+alert ('ошибка')
+event.target.reset()
+}
+
+
 });

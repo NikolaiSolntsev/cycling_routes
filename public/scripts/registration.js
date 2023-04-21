@@ -9,7 +9,12 @@ form.addEventListener('submit', async (event) => {
     body: JSON.stringify({ login: login.value, password: password.value , password2: password2.value}),
     headers:{ 'Content-Type': 'application/json' }
   });
+  if (response.ok) {
+    // редирект на главную
+    window.location.href = '/';
+  } else {
   const result = await response.json();
-
-});
+alert ('твоя ошибка')
+event.target.reset()
+}})
 

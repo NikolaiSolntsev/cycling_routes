@@ -21,7 +21,29 @@ authApiRoute.post('/reg', async (req, res) => {
     login,
     password: await bcrypt.hash(password, 10),
   });
+  req.session.userId = user.id;
+
+   
   res.status(201).json({ success: true });
 });
+
+
+
+
+authApiRoute.post('/login', async (req, res) => {
+  const { login, password } = req.body;
+
+  
+  const user = await User.findOne({ where: { login } });
+ 
+  if (!user || !(await bcrypt.compare(password, user.password))) {
+    res.json({ success: false, message: 'Нет такого пользователя либо пароли не совпадают' });
+    return;
+  }
+
+  req.session.userId = user.id;
+
+  res.json({ success: true }, user.id);
+})
 
 module.exports = authApiRoute;

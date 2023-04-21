@@ -1,12 +1,13 @@
 const React = require('react');
 const NavBar = require('./NavBar');
 
-function Layout({ title, children, trip }) {
+function Layout({ title, children, trip, user}) {
   return (
     <html lang="en">
       <head>
         <title>{title}</title>
         <script src='/public/scripts/navbar.js' defer></script>
+
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -16,7 +17,7 @@ function Layout({ title, children, trip }) {
         <link href="/style/style.css" rel="stylesheet" />
       </head>
       <body className="body">
-      <NavBar trip={trip} />
+        <NavBar trip={trip} user={user} />
         {children}
       </body>
     </html>

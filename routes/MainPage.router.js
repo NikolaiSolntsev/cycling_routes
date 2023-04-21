@@ -8,7 +8,7 @@ const mainRoute = require('express').Router();
 mainRoute.get('/', async (req, res) => {
   const {user}= res.app.locals //
   const trips = await Trip.findAll();
-  const element = React.createElement(MainPage, { user, trips });//
+  const element = React.createElement(MainPage, { user, trips });
   const html = ReactDOMServer.renderToStaticMarkup(element);
   res.send(`<!DOCTYPE html>${html}`);
 });

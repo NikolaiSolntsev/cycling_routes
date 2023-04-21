@@ -132,3 +132,19 @@ nav a {
 .edit-form {
   display: none;
 }
+
+.edit-form{
+  margin-left: 20px;
+  margin-right: 10px;
+  height: 50px;
+}
+
+
+.button-save{
+  margin-left: 20px;
+  margin-right: 10px;
+  width: 220px;
+  height: 50px;
+  background-color: #0941da;
+  color: #ffffff;
+}
